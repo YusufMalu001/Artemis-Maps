@@ -21,15 +21,6 @@ const Map = ({ mapRef }) => {
     const navigationControls = new mapboxgl.NavigationControl();
     mapRef.current.addControl(navigationControls, "top-left");
 
-    const directionsControl = new Directions({
-      accessToken: mapboxgl.accessToken,
-      unit: "imperial",
-    });
-
-    mapRef.current.addControl(directionsControl, "top-left");
-
-    directionsControl.setOrigin([75.88104, 22.76251]);
-
     mapRef.current.on("load", function () {});
 
     return () => mapRef.current.remove();

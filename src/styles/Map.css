@@ -3,34 +3,3 @@
   width: 100%;
   border-radius: 8px;
 }
-
-.custom-marker-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: #27187e;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 12px;
-  font-weight: bold;
-  border: 2px solid #fff;
-}
-
-.leaflet-verticalcenter {
-  position: absolute;
-  z-index: 1000;
-  pointer-events: none;
-  top: 50%; /* possible because the placeholder's parent is the map */
-  transform: translateY(-50%); /* using the CSS3 Transform technique */
-  padding-top: 10px;
-}
-
-.leaflet-verticalcenter .leaflet-control {
-  margin-bottom: 10px;
-}
-
-.leaflet-control-container .leaflet-routing-container-hide {
-  display: none;
-}
