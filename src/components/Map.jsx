@@ -3,11 +3,12 @@ import mapboxgl from "mapbox-gl";
 import { useContext } from "react";
 import Directions from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions"; // Temporary Workaround See https://github.com/mapbox/mapbox-gl-directions/issues/157
 import { DarkModeContext } from "../context/DarkModeContext";
+import { MAPBOX_ACCESS_TOKEN } from "../config";
 
 const Map = ({ mapRef }) => {
   const { isDarkMode } = useContext(DarkModeContext);
   useEffect(() => {
-    mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
+    mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN
 
     mapRef.current = new mapboxgl.Map({
       container: "map",
